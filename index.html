@@ -8,73 +8,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="css/ohmygod.css" rel="stylesheet" type="text/css"/>
+<style type="text/css"> 
+#tab{
+ overflow:hidden; 
+width:1440px;
+height:1440px; 
+ 
+position:fixed;
+	top:0;right:0;bottom:0;left:0;
+	margin:auto;
+ } 
+#tab>img:not(:first-child){ display:none; }
+</style> 
+<script> 
+    window.onload = function(){ 
+        var images = document.getElementsByTagName('img'); 
+        var pos = 0; 
+        var len = images.length; 
+        setInterval(function(){ 
+            images[pos].style.display = 'none';   /*设置索引为0的图片（就是第一张）样式为dislay：none；*/
+            pos = ++pos == len ? 0 : pos; /*如果索引值 == 你所添加图片的数量就把索引值设置为0，如果不等于就把自加后的索引值 赋给pos； */
+            images[pos].style.display = 'inline';   /*显示图片*/ 
+        },2000); 
+    }; 
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e9e0ed8d2dd56059cc040dc1f05b7424";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
 </script>
-
 
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/1.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/2.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/3.jpg" alt="...">
-				</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/4.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/5.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/6.jpg" alt="...">
-				</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/7.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/8.jpg" alt="...">
-				</a>
-			</div>
-			<div class="col-xs-4 col-md-4">
-				<a href="#" class="thumbnail">
-					<img src="img/9.jpg" alt="...">
-				</a>
-			</div>
-		</div>
+	<div id="tab"> 
+    		<img src="img/1.jpg" width="1080" height="1440"/> 
+    		<img src="img/2.jpg" width="1440" height="1080/>
+   		<img src="img/3.jpg" width="1440" height="1080"/>
+   		<img src="img/4.jpg" width="1080" height="1440"/>
+   		<img src="img/5.jpg" width="1440" height="1080"/> 
+    		<img src="img/6.jpg" width="1080" height="1440"/> 
+    		<img src="img/7.jpg" width="1080" height="1440"/> 
+    		<img src="img/8.jpg" width="1080" height="1440"/>
+    		<img src="img/9.jpg" width="1440" height="1080"/>
+    		<img src="img/9.jpg" width="1440" height="1080"/>
 	</div>
-
 </body>
 </html>
